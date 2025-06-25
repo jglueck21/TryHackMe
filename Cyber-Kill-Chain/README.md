@@ -1,74 +1,68 @@
-# 🧱 TryHackMe: Cyber Kill Chain
+# 🧱 TryHackMe: Cyber Kill Chain (ZMT)
 
-This is my personal write-up for the [Cyber Kill Chain](https://tryhackme.com/room/cyberkillchain) room on TryHackMe. The room introduces the Cyber Kill Chain model, a framework developed by Lockheed Martin to describe the stages of a cyberattack. This documentation outlines the main concepts, key takeaways, and my answers (without spoilers) for educational purposes.
+This is my personal write-up for the [Cyber Kill Chain (ZMT)](https://tryhackme.com/room/cyberkillchainzmt) room on TryHackMe. The room is part of the **SOC Level 1 path** and guides you through each phase of Lockheed Martin’s Cyber Kill Chain model via quiz questions and a practical exercise.
 
 ---
 
 ## 📘 Overview
 
-The **Cyber Kill Chain** is a seven-stage model that describes the typical phases of a cyberattack. Understanding this model helps both offensive and defensive security professionals recognize how attacks unfold and how to break the chain at each step.
+The **Cyber Kill Chain** is a seven-stage model describing the lifecycle of a cyberattack. It helps defenders understand attack sequences and break the chain at vulnerable points :contentReference[oaicite:1]{index=1}.
 
 ---
 
-## 🔗 The 7 Stages of the Kill Chain
+## 🔗 The 7 Phases & My Answers
 
-### 1. Reconnaissance  
-- The attacker gathers information about the target.  
-- This can include passive methods (WHOIS lookups, DNS queries) and active techniques (port scanning, phishing research).  
-- Goal: Identify weak points to exploit.
+### 1. Reconnaissance
+- **OSINT Framework** — a web‑based collection of open‑source intelligence tools :contentReference[oaicite:2]{index=2}.
+- **Email harvesting** — the process of collecting email addresses during OSINT :contentReference[oaicite:3]{index=3}.
 
-### 2. Weaponization  
-- Crafting a malicious payload (e.g., malware, macro-laced documents) tailored to exploit a specific vulnerability.  
-- No interaction with the target happens at this stage.
+### 2. Weaponization
+- **Macro** — a set of commands/scripts commonly embedded (often maliciously) in Office documents :contentReference[oaicite:4]{index=4}.
 
-### 3. Delivery  
-- The attacker delivers the weapon to the target, typically via phishing emails, malicious websites, USB drives, etc.  
-- It's one of the most visible points for defenders to intervene.
+### 3. Delivery
+- **Watering hole attack** — infecting a site frequently used by a specific target group :contentReference[oaicite:5]{index=5}.
 
-### 4. Exploitation  
-- Once delivered, the payload is executed by the target (often unknowingly).  
-- Common vectors: buffer overflows, script injection, malicious macros.
+### 4. Exploitation
+- **Zero‑day** — an exploit targeting a previously unknown vulnerability :contentReference[oaicite:6]{index=6}.
 
-### 5. Installation  
-- The attacker establishes a foothold, often through malware like Remote Access Trojans (RATs).  
-- Persistence techniques may be used (startup scripts, services, etc.).
+### 5. Installation
+- **Timestomping** — modifying file timestamps to hide malicious changes :contentReference[oaicite:7]{index=7}.
+- **Web shell** — a malicious script installed on a compromised webserver to maintain remote access :contentReference[oaicite:8]{index=8}.
 
-### 6. Command and Control (C2)  
-- The attacker creates a communication channel with the compromised system.  
-- This allows remote control, data exfiltration, or further internal reconnaissance.
+### 6. Command & Control (C2)
+- **DNS Tunneling** — using DNS queries to communicate covertly with a C2 server :contentReference[oaicite:9]{index=9}.
 
-### 7. Actions on Objectives  
-- The attacker acts on their goal, which could include data theft, sabotage, or lateral movement within the network.
+### 7. Actions on Objectives (Exfiltration)
+- **Shadow Copy** — a Windows feature used to create snapshots of files/volumes, which attackers can exploit for exfiltration :contentReference[oaicite:10]{index=10}.
 
 ---
 
-## 🧠 Key Takeaways
+## 🧪 Practical Task
 
-- The Kill Chain model provides a **structured approach** to understanding and defending against cyberattacks.
-- Defenders can **break the chain at any stage** to stop an attack from succeeding.
-- Real-world security tools and practices (e.g., SIEMs, IDS/IPS, endpoint protection) are often mapped against these stages.
+In the **Practice Analysis** section, I mapped a real-world attack onto the Cyber Kill Chain phases.
 
 ---
 
-## 📝 What I Learned
+## 📝 Key Takeaways
 
-- The importance of **early detection**, especially during reconnaissance and delivery phases.
-- How **each stage builds upon the previous**, emphasizing the need for layered defenses.
-- That even **basic knowledge of the kill chain** enhances both offensive strategy and defensive analysis.
+- The Kill Chain offers a structured framework to analyze attacks end-to-end :contentReference[oaicite:12]{index=12}.
+- Breaking the chain at any early stage (like reconnaissance or delivery) can prevent full compromise.
+- Even older models like Lockheed Martin’s remain relevant today, especially when combined with frameworks like MITRE ATT&CK :contentReference[oaicite:13]{index=13}.
 
 ---
 
-## ✅ Room Completion
+## ✅ Completion Notes
 
-All questions were completed successfully. The room is non-interactive (quiz-based), and does not involve any real exploitation or hands-on attack simulation.
+- This room is quiz-based with a final static site exercise.
+- No hands-on exploitation or labs were performed.
 
 ---
 
 ## 📜 Disclaimer
 
-This write-up is for educational purposes only and reflects my own understanding and interpretation of the Cyber Kill Chain room. All intellectual property belongs to [TryHackMe](https://tryhackme.com/).
+My write‑up is based on my own answers and learning. All intellectual property belongs to TryHackMe. This document is for educational purposes only.
 
 ---
 
-Thanks for reading! ✨  
-Happy hacking and stay safe!
+Thanks for reading — happy defending! 🛡️
+
